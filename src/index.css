@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@theme {
+  --color-text: #111827;
+  --color-text-secondary: #4b5563;
+  --color-border: #e5e7eb;
+  --color-card: #ffffff;
+  --color-background: #f9fafb;
+  --color-accent: #1e40af;
+  --color-accent-hover: #1d4ed8;
+
+  --color-text-dark: #f9fafb;
+  --color-text-secondary-dark: #9ca3af;
+  --color-border-dark: #374151;
+  --color-card-dark: #1f2937;
+  --color-background-dark: #111827;
+  --color-accent-dark: #1d4ed8;
+  --color-accent-hover-dark: #2563eb;
+
+  --color-red-primary: #c8102e;
+  --color-red-background: #b91c1c;
+}
+
+html {
+  @apply transition-theme will-change-[background-color];
+}
+
+@utility transition-theme {
+  @apply transition-colors duration-300 ease-linear;
+}
+@utility card {
+  @apply text-text dark:text-text-dark rounded-lg border border-border dark:border-border-dark bg-card dark:bg-card-dark  overflow-hidden transition-theme shadow-md shadow-border dark:shadow-border-dark;
+}
+@utility bg-theme {
+  @apply bg-background dark:bg-background-dark transition-theme;
+}
+@utility text-primary-theme {
+  @apply text-text dark:text-text-dark;
+}
+@utility text-secondary-theme {
+  @apply text-text-secondary dark:text-text-secondary-dark;
+}
+@utility accent-text {
+  @apply text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark;
+}
+@utility button {
+  @apply w-full rounded-md font-semibold cursor-pointer transition-theme py-1 px-2 text-text-dark outline-border dark:outline-border-dark;
+}
+@utility accent-component {
+  @apply bg-accent dark:bg-accent-dark hover:bg-accent-hover dark:hover:bg-accent-hover-dark button;
+}
+@utility text-error {
+  @apply text-red-primary text-xs min-h-5 inline-block text-pretty;
+}
+.fade-animation {
+  animation: fade-out 3s ease-in-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 100;
+  }
+  90% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}

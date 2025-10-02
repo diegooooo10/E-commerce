@@ -13,7 +13,7 @@ export const ImageLazy = ({
   src,
   alt,
   className = "",
-  placeholder = "/src/assets/images/placehold.png",
+  placeholder = "/placehold.png",
   height = 175,
   width = 480,
 }: ImageLazyProps) => {

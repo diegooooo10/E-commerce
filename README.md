@@ -32,7 +32,7 @@ Sigue estos sencillos pasos para tener una copia local del proyecto y ejecutarlo
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [URL_DE_TU_REPOSITORIO]
+    git clone `https://github.com/diegooooo10/E-commerce.git`
     ```
 
 2.  **Instala las dependencias:**
